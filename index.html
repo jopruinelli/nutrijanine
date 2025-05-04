@@ -9,6 +9,10 @@
    Janine Pruinelli | Nutricionista Infantil, atendimento online e presencial em Imbituba e Garopaba;
   </title>
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
    html, body {
   overflow-x: hidden;
     }
@@ -40,7 +44,8 @@
       font-size: 0.9rem;
     }
 
-    a {
+    /* Remover cor azul padrão dos links */
+a {
     color: inherit;
     text-decoration: none;
   }
@@ -58,10 +63,6 @@
       gap: 1rem;
       width: 100%;
       margin: 0;
-      padding: 2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
     }
 
     .section .img {
@@ -180,7 +181,8 @@
   transform: translateY(0);
 }
 .section .img img {
-  width: 560px;
+  max-width: 100%;
+  height: auto;
   /* 100%; */
   height: auto;
   border-radius: 16px;
