@@ -1,0 +1,213 @@
+    /* ================================ */
+    /*      RESET & UTILITIES           */
+    /* ================================ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      overflow-x: hidden;
+      font-family: 'AirFactory', sans-serif;
+      background-color: #f0eadf;
+      color: #3c4d38;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ================================ */
+    /*      TYPOGRAPHY & FONTS           */
+    /* ================================ */
+    @font-face {
+      font-family: 'AirFactory';
+      src: url('../fonts/AirFactoryRoundedBlack.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'BrittneySignature';
+      src: url('../fonts/BrittneySignature.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* ================================ */
+    /*         ANIMATIONS                */
+    /* ================================ */
+    .fade-slide {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-slide.visible { opacity: 1; transform: translateY(0); }
+
+    /* ================================ */
+    /*      LAYOUT - HEADER              */
+    /* ================================ */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    header img {
+      width: 60px;
+      max-width: 100%;
+    }
+    .header__acoes a {
+      background-color: #de9622;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* ================================ */
+    /*      LAYOUT - BANNER              */
+    /* ================================ */
+    .banner-principal {
+      text-align: center;
+      padding: 0.2rem;
+    }
+    .banner-principal img {
+      max-width: 60% !important;
+      display: block;
+      margin: 0 auto;
+      height: auto !important;
+    }
+
+    /* ================================ */
+    /*      LAYOUT - MAIN SECTION        */
+    /* ================================ */
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      gap: 1rem;
+      width: 100%;
+      margin: 0;
+    }
+    .section .img {
+      width: 60%;
+      text-align: center;
+    }
+    .section .img img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+    .section .content {
+      width: 30%;
+      padding: 2rem;
+    }
+    .section h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+    .section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0.5rem 0;
+    }
+
+    /* ================================ */
+    /*      LAYOUT - REDES SECTIONS      */
+    /* ================================ */
+    .redes {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .redes h2 {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      margin-bottom: 1rem;
+    }
+    .botao-whatsapp {
+      display: inline-block;
+      background-color: #de9622;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      margin-top: 2rem;
+    }
+    .icones {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .icones img { width: 100px; }
+
+    /* ================================ */
+    /*      LAYOUT - FOOTER              */
+    /* ================================ */
+    .rodape {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: #8da085;
+      padding: 2rem;
+      color: white;
+    }
+    .rodape__coluna {
+      flex: 1 1 22%;
+      min-width: 200px;
+      margin-bottom: 1.5rem;
+    }
+    .rodape__coluna:first-child {
+      flex: 2 1 30%;
+    }
+    .rodape__titulo {
+      font-family: 'BrittneySignature', sans-serif;
+      font-weight: normal;    /* força o peso normal da fonte */
+      font-size: 1.8rem;
+      margin: 0;
+      color: white;
+    }
+    .rodape p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* ================================ */
+    /*      IMAGE SPECIFIC FIXES         */
+    /* ================================ */
+    /* Responsividade para quem-sou-eu.jpeg */
+    img[src*="quem-sou-eu.jpeg"] {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 1rem 0;
+      height: auto;
+    }
+
+    /* ================================ */
+    /*      RESPONSIVE RULES             */
+    /* ================================ */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header__acoes a {
+        display: block;
+        margin-top: 1rem;
+      }
+      .section {
+        flex-direction: column;
+      }
+      .section .content {
+        width: 100%;
+        padding: 0 1rem;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .section {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 2rem;
+      }
+      .section .img { width: 50%; }
+      .section .content { width: 50%; }
+    }

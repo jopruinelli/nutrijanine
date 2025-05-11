@@ -1,491 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
- <head>
+<head>
+  <!-- ================================ -->
+  <!--       META & FAVICON               -->
+  <!-- ================================ -->
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Nutri do seu filho e consultora de amamentação | Promoção da saúde começa na infância." name="description"/>
-  <link href="img/icons/favicon.ico" rel="icon" type="image/icon"/>
-  <title>
-   Janine Pruinelli | Nutricionista Infantil, atendimento online e presencial em Imbituba e Garopaba;
-  </title>
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Nutri do seu filho e consultora de amamentação | Promoção da saúde começa na infância."/>
+  <!-- Favicon -->
+  <link href="assets/img/icons/favicon.ico" rel="icon" type="image/icon"/>
+  <!-- URL canônica -->
+  <link rel="canonical" href="https://nutrijanine.com.br/"/>
+  <title>Janine Pruinelli | Nutricionista Infantil, atendimento online e presencial em Imbituba e Garopaba</title>
 
-   html, body {
-  overflow-x: hidden;
-    }
-    body {
-      margin: 0;
-      font-family: 'AirFactory', sans-serif;
-      background-color: #f0eadf; 
-      color: #3c4d38;
-    }
+  <!-- Estilos externos -->
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+</head>
+<body>
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
-
-    header img {
-      width: 60px;
-      max-width: 100%;
-    }
-
-    .header__acoes a {
-      background-color: #de9622; 
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 40px;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    /* Remover cor azul padrão dos links */
-a {
-    color: inherit;
-    text-decoration: none;
-  }
-    .banner-principal {
-      text-align: center;
-      padding: 0.2rem 0.2rem;
-    }
-
-    .section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1rem;
-      gap: 1rem;
-      width: 100%;
-      margin: 0;
-    }
-
-    .section .img {
-      width: 60%;
-      padding: 0rem;
-      text-align: center;
-      box-sizing: border-box;
-    }
-
-    .section .img img {
-      width: 100%;
-      border-radius: 16px;
-      align-items: center;
-    }
-
-    .section .content {
-      width: 30%;
-      padding: 2rem;
-      box-sizing: border-box;
-    }
-
-    .section h1 {
-      color: #3c4d38;
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 1rem;
-    }
-
-    .section h2 {
-      color: #3c4d38;
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 1rem;
-    }
-
-    .section p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin: 0.5rem 0;
-    }
-
-    .btn {
-      background-color: #e88b76;
-      border: none;
-      padding: 1.5rem 3rem;
-      color: white;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 1rem;
-      font-family: 'AirFactory', sans-serif;
-      letter-spacing: 0.5px;
-    }
-
-    .botao-whatsapp {
-      display: inline-block;
-      background-color: #de9622;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      margin-top: 2rem;
-    }
-
-    .redes {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    .redes h3 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .icones {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    .icones img {
-      width: 100px;
-    }
-
-    footer {
-      background-color: #fff2e8;
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 2rem 1rem;
-      color: #3c4d38;
-      margin-top: 3rem;
-    }
-
-    @media screen and (max-width: 768px) {
-      .section {
-        flex-direction: column;
-      }
-    }
-
-    @font-face {
-  font-family: 'AirFactory';
-  src: url('fonts/AirFactoryRoundedBlack.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  }
-  
-.fade-slide {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  width: 100%;
-}
-.fade-slide.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.section .img img {
-  max-width: 100%;
-  height: auto;
-  /* 100%; */
-  height: auto;
-  border-radius: 16px;
-}
-
-.rodape {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: #8da085;
-  padding: 2rem;
-  color: #f0eadf;
-}
-
-.rodape__coluna {
-  flex: 1 1 22%; /* padrão para as demais */
-  min-width: 200px;
-  margin-bottom: 1.5rem;
-}
-
-.rodape__coluna:first-child {
-  flex: 2 1 30%; /* primeira coluna mais larga */
-}
-
-.rodape__titulo {
-  color: #f0eadf;
-  font-size: 1.8rem;
-  margin: 0;
-  font-family: 'BrittneySignature', sans-serif;
-}
-
-.rodape h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.0rem;
-}
-
-.rodape p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  .header__acoes a {
-    display: block;
-    margin-top: 1rem;
-  }
-  h1 {
-    font-size: 1.2rem;
-  }
-}
-   @media (max-width: 768px) {
-  .content {
-    flex-direction: column !important;
-    align-items: center;
-    text-align: center;
-  }
-
-  .content img {
-    width: 90%;
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-
-  .content > div {
-    width: 100%;
-  }
-}
-   /* Ajuste base para .content */
-.content {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-}
-
-/* Ajustes para mobile */
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  .content img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  .content > div {
-    width: 100% !important;
-  }
-}
-   /* Corrigir especificamente a imagem quem-sou-eu.jpeg */
-img[src*="quem-sou-eu.jpeg"] {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  padding: 1rem 0;
-}
-
-/* Redefinir padding/margin no content também */
-@media (max-width: 768px) {
-  .content {
-    padding: 0 1rem !important;
-  }
-}
-   /* Tornar responsiva a imagem logo-gabi.jpeg */
-img[src*="logo-gabi.jpeg"] {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-   /* Impedir que .content.fade.slide reduza de largura */
-.content.fade-slide {
-  min-width: 320px;
-  width: 100%;
-  max-width: 560px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-   /* Correção para manter imagem à esquerda e texto à direita em telas grandes */
-@media (min-width: 769px) {
-  .section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .section .img {
-    width: 50%;
-    order: 1;
-  }
-
-  .section .content {
-    width: 50%;
-    order: 2;
-  }
-}
-   /* Reduzir tamanho da logo de forma responsiva com prioridade */
-  
-
-/* Versão única e correta do estilo da logo */
-.banner-principal img {
-  max-width: 60% !important;
-  margin: 0rem 0;
-  height: auto !important;
-  margin: 0 auto !important;
-  display: block !important;
-}
-  </style>
- </head>
- <body>
+  <!-- Header -->
   <header>
-   <img alt="icone logo" src="img/Janine Pruinelli IDENTIDADE VISUAL22.png"/>
-   <div class="header__acoes">
-    <a href="https://wa.me/5548996596373" style="text-decoration: none;" target="_blank">
-     Agende agora
-    </a>
-   </div>
+    <img src="assets/img/Janine Pruinelli IDENTIDADE VISUAL22.png" alt="Ícone logo"/>
+    <div class="header__acoes">
+      <a href="https://wa.me/5548996596373" target="_blank">Agende agora</a>
+    </div>
   </header>
+
+  <!-- Main Content -->
   <main>
-   
-   <div class="banner-principal fade-slide">
-    <img alt="Logo Janine Pruinelli" src="img/Janine Pruinelli IDENTIDADE VISUAL10.png"/>
-   </div>
-  
-   <div class="section">
-    <div class="img fade-slide">
-     <img alt="Nutri Janine" src="img/quem-sou-eu.jpeg"/>
+    <!-- Banner -->
+    <div class="banner-principal fade-slide">
+      <img src="assets/img/Janine Pruinelli IDENTIDADE VISUAL10.png" alt="Logo Janine Pruinelli"/>
     </div>
-    <div class="content fade-slide">
-     <h1>
-      Nutricionista Infantil
-      <br/>
-     </h1>
-     <p>
-      🤰 Nutri do seu filho e consultora de amamentação
-      <br/>
-      👶🏻 Promoção da saúde começa na infância
-     </p>
-    </div>
-   </div>
-   <div class="redes fade-slide" id="localizacao">
-    <h2>
-     Locais de Atendimento
-    </h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-     <a href="https://wa.me/5548996596373" style="text-decoration: none;" target="_blank">
-      <div style="background-color: #8da085; padding: 1rem; border-radius: 10px; text-align: center; width: 180px;">
-       <div style="font-size: 1.5rem;">
-        🌎
-       </div>
-       <div style="color: #f0eadf;">
-        Atendemos
-        <br/>
-        Online
-       </div>
+
+    <!-- Section: Sobre -->
+    <div class="section">
+      <div class="img fade-slide">
+        <img src="assets/img/quem-sou-eu.jpeg" alt="Nutri Janine"/>
       </div>
-     </a>
-     <a href="https://wa.me/5548996596373" style="text-decoration: none;" target="_blank">
-      <div style="background-color: #8da085; padding: 1rem; border-radius: 10px; text-align: center; width: 180px;">
-       <div style="font-size: 1.5rem;">
-        📍
-       </div>
-       <div style="color: #f0eadf;">
-        Imbituba
-        <br/>
-        Garopaba
-       </div>
+      <div class="content fade-slide">
+        <h1>Nutricionista Infantil</h1>
+        <p>🤰 Nutri do seu filho e consultora de amamentação<br/>👶🏻 Promoção da saúde começa na infância</p>
       </div>
-     </a>
     </div>
-   </div>
-   <div class="redes fade-slide">
-    <h2>
-     Agende seu atendimento
-    </h2>
-    <p>
-     Entre em contato pelo WhatsApp e tire suas d&uacute;vidas
-    </p>
-    <a class="botao-whatsapp" href="https://wa.me/5548996596373" style="text-decoration: none;" target="_blank">
-      Falar com Janine
-    </a>
-   </div>
-   <div class="redes fade-slide">
-    <h2>
-     Siga-nos nas redes sociais
-    </h2>
-    <div class="icones">
-     <a href="https://instagram.com/nutrijaninepruinelli" style="text-decoration: none;" target="_blank">
-      <img alt="Instagram" src="img/icons/instagram-icon.png"/>
-     </a>
-     <!-- 
-        TODO: Verificar se o Facebook é necessário, se sim, adicionar a imagem no img/icons        
-        <a href="https://web.facebook.com/nutrijaninepruinelli/about" target="_blank" style="text-decoration: none;">
-        <img src="img/icons/facebook-icon.png" alt="Facebook" />
-      </a> 
-      -->
+
+    <!-- Section: Locais de Atendimento -->
+    <div class="redes fade-slide" id="localizacao">
+      <h2>Locais de Atendimento</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+        <a href="https://wa.me/5548996596373" target="_blank">
+          <div style="background-color: #8da085; padding: 1rem; border-radius: 10px; width: 180px; text-align: center;">
+            <div style="font-size: 1.5rem;">🌎</div>
+            <div style="color: #f0eadf;">Atendemos<br/>Online</div>
+          </div>
+        </a>
+        <a href="https://wa.me/5548996596373" target="_blank">
+          <div style="background-color: #8da085; padding: 1rem; border-radius: 10px; width: 180px; text-align: center;">
+            <div style="font-size: 1.5rem;">📍</div>
+            <div style="color: #f0eadf;">Imbituba<br/>Garopaba</div>
+          </div>
+        </a>
+      </div>
     </div>
-   </div>
+
+    <!-- Section: Agendamento -->
+    <div class="redes fade-slide">
+      <h2>Agende seu atendimento</h2>
+      <p>Entre em contato pelo WhatsApp e tire suas dúvidas</p>
+      <a class="botao-whatsapp" href="https://wa.me/5548996596373" target="_blank">Falar com Janine</a>
+    </div>
+
+    <!-- Section: Redes Sociais -->
+    <div class="redes fade-slide">
+      <h2>Siga-nos nas redes sociais</h2>
+      <div class="icones">
+        <a href="https://instagram.com/nutrijaninepruinelli" target="_blank">
+          <img src="assets/img/icons/instagram-icon.png" alt="Instagram"/>
+        </a>
+      </div>
+    </div>
   </main>
+
+  <!-- Footer -->
   <footer class="rodape">
-   <div class="rodape__coluna">
-    <h2 class="rodape__titulo">
-     Nutricionista <br> Janine Pruinelli
-    </h2>
-   </div>
-   <div class="rodape__coluna">
-    <h3>
-
-    </h3>
-    <p>
-    </p>
-   </div>
-   <div class="rodape__coluna">
-    <h3>
-     Imbituba e Garopaba
-    </h3>
-    <p>
-     e Atendimento Online
-    </p>
-   </div>
-   <div class="rodape__coluna">
-    <h3>
-     Contato
-    </h3>
-    <p>
-     <a href="https://wa.me/5548996596373" style="text-decoration: none;" target="_blank">
-      (48) 9 9659-6373
-     </a>
-     <br/>
-     nutrijaninep.martins@gmail.com
-    </p>
-   </div>
+    <div class="rodape__coluna">
+      <h2 class="rodape__titulo">Nutricionista<br/>Janine Pruinelli</h2>
+    </div>
+    <div class="rodape__coluna"></div>
+    <div class="rodape__coluna">
+      <h3>Imbituba e Garopaba</h3>
+      <p>e Atendimento Online</p>
+    </div>
+    <div class="rodape__coluna">
+      <h3>Contato</h3>
+      <p><a href="https://wa.me/5548996596373" target="_blank">(48) 9 9659-6373</a><br/>nutrijaninep.martins@gmail.com</p>
+    </div>
   </footer>
-
-  <script>
-   const observers = document.querySelectorAll('.fade-slide');
-  const onScroll = () => {
-    observers.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 50) {
-        el.classList.add('visible');
-      }
-    });
-  };
-  window.addEventListener('scroll', onScroll);
-  window.addEventListener('load', onScroll);
-  </script>
- </body>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
