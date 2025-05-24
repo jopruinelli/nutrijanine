@@ -211,3 +211,26 @@
       .section .img { width: 50%; }
       .section .content { width: 50%; }
     }
+
+    /* ================================ */
+    /*      INSTAGRAM WIDGET           */
+    /* ================================ */
+    .instagram-widget {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    .instagram-widget .elfsight-app-f39f3f52-0714-4b6c-b4bf-520073f4a4c6 {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    @media (max-width: 768px) {
+      .instagram-widget {
+        margin: 1.5rem 0;
+        padding: 0 0.5rem;
+      }
+    }
